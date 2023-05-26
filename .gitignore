@@ -2,3 +2,4 @@ appcontroller
 Makefile
 *.o
 moc_*.cpp
+CMakeLists.txt.user

@@ -49,6 +49,7 @@ static const char socketPath[] = "#Boot2Qt_appcontroller";
 
 static void usage()
 {
+    printf("NOTE: Modified by PenMedTech to stop appcontroller killing already running applications\n");
     printf("appcontroller [--debug-gdb]  [--debug-gdb-port <port>]"
            " [--debug-qml] [--debug-qml-port <port>] [--qml-debug-services <services>]"
            " [--profile-perf <params>] [--port-range <range>] [--stop] [--launch] [--show-platfrom]"
@@ -358,7 +359,7 @@ int main(int argc, char **argv)
     bool useQML = false;
     QString qmlDebugServices;
     QStringList perfParams;
-    bool fireAndForget = false;
+    bool fireAndForget = true;
     bool detach = false;
     Utils::PortList range;
 
